@@ -1,0 +1,556 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body {
+    background-image: url('https://th.bing.com/th/id/OIP.tltfFXNwv4aq_Bn0kB9GyAHaJ4?pid=ImgDet&w=768&h=1024&rs=1.jpg');
+    background-size: cover; /* Adjust the background size to cover the page */
+    background-attachment: fixed;
+
+}
+header {
+    padding: 1em;
+    color: #07b3f7;
+    font-size: 2em;
+    background-image: url('test/hearing-test-and-buying-hearing-aid.jpg');
+}
+    
+h4 {
+    text-align: left;
+    font-family: cursive;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    color:#07b3f7;/* Change the text color */
+    font-weight: Italic; /* Apply a bold font weight */
+    margin: 0; /* Remove any default margin */
+    padding: 10px;
+}
+.custom-h1 {
+    text-align: center;
+    margin: 6em; /* Remove any default margin */
+}
+
+
+
+
+section {
+    margin: 2em;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(37, 37, 37, 0.1);
+}
+
+h2 {
+    color: rgb(11, 1, 1);
+}
+
+p {
+    color: #b5b2b2;
+    line-height: 1.6;
+}
+.content-text {
+    color: #fff; /* Replace #FF0000 with your desired text color */
+    text-align: center;
+}
+.custom-h2 {
+    color: #fff; 
+    margin:2em;
+}
+button {
+    background-color: #203865;
+    color: white;
+    padding: 1em 2em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color:#203865;
+}
+
+footer {
+    background-color: #475665;
+    color: white;
+    padding: 0.05em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#banner {
+    background: linear-gradient(0deg,rgb(124, 223, 243),#683FEA);;
+    color: white;
+    padding: 2em;
+}
+
+#banner h2 {
+    font-size: 2.5em;
+}
+
+#content {
+    background-color: #89acca;
+}
+
+/* Feedback Form Section */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+}
+
+header {
+   
+    background: linear-gradient(0deg,rgb(124, 223, 243),#683FEA);
+    text-align: center;
+    padding: 0.2em;
+    color: white;
+    font-size: 22px;
+}
+
+.feedback-form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.feedback-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 6px 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.feedback-form input[type="submit"] {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #2e98c6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.feedback-form input[type="submit"]:hover {
+    background-color: #264e75;
+}
+
+footer {
+    background-color: #264e75;
+    color: white;
+    padding: 0.05em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.cssbuttons-io-button {
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset -3px -16px 2em 0em #081e7c;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+    left: 620px;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+
+  .btn {
+    border: none;
+    width: 19em;
+    height: 4em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: #203865;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+  
+  .sparkle {
+    fill: #ddd;
+    transition: all 800ms ease;
+  }
+  
+  .text {
+    font-weight: 600;
+    color: #ddd;
+    font-size: medium;
+}
+  
+  .btn:hover {
+    background: linear-gradient(0deg,rgb(124, 223, 243),#683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #7cedfb;
+    transform: translateY(-2px);
+  }
+  
+  .btn:hover .text {
+    color: white;
+  }
+  
+  .btn:hover .sparkle {
+    fill: white;
+    transform: scale(1.2);
+  } 
+  
+  .form-container {
+    width: 37%;
+    background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 10px solid transparent;
+    padding: 32px 24px;
+    font-size: 13px;
+    font-family: inherit;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    gap: 74px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 47px;
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    width: 91%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+    width: 91%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+  
+  
+.custom-form {
+    position: relative;
+    width: 320px;
+    height: 180px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.custom-before, .custom-after {
+    position: absolute;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    background-color: #FF66CC;
+    z-index: -1;
+}
+
+.custom-before {
+    right: 10px;
+    top: -40px;
+    filter: blur(10px);
+}
+
+.custom-after {
+    right: -20px;
+    top: 20px;
+    background-color: #9933FF;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.custom-content {
+    position: relative;
+}
+
+.custom-title {
+    font-weight: 800;
+    font-size: 24px;
+    color: #9933FF;
+    margin-bottom: 10px;
+}
+
+.custom-description {
+    color: #666;
+}
+
+.custom-input-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.custom-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    background: transparent;
+}
+
+.custom-button {
+    background-color: #9933FF;
+    color: #f7f7f7;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #9900CC;
+}
+#prediction-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  #prediction-form-section h2 {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    margin: 20px 0;
+  }
+  
+  #prediction-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #prediction-form label {
+    font-weight: bold;
+    color: black;
+    margin: 10px 0;
+  }
+  
+  #prediction-form input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 2rem;
+    width: 80%;
+    border: none;
+    box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
+    outline: none;
+    background-color: inherit;
+    color: rgb(161, 161, 161);
+    font-size: inherit;
+  }
+  
+  #prediction-form button {
+    margin-top: 20px;
+    font-weight: bold;
+    box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
+    color: rgb(112, 112, 112);
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    background-color: #9933FF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+  }
+  
+  #prediction-form button:hover {
+    background-color: #9900CC;
+  }
+  
+  #prediction-form .sparkle {
+    height: 24px;
+    width: 24px;
+    fill: #FFFFFF;
+  }
+  
+  #prediction-form .text {
+    margin-left: 5px;
+  }
+  
+  #prediction-form button .sparkle path {
+    fill: #FFFFFF;
+  }
+  /* CSS for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+

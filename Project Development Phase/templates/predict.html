@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Custom CSS for side-by-side input fields */
+        .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-container {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#result-section {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label,
+        input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        /* Hide the result section by default */
+        .myCard {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.frontSide,
+.frontSide::before {
+  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+}
+
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 class="custom-h2">Your Journey into Audiometric AI</h2>
+    </header>
+
+    <!-- Prediction Form Section -->
+    <div class="submissionform">
+        <section id="prediction-form-section">
+            <h2>Make a Prediction</h2>
+            <form id="prediction-form" onsubmit="return submitForm(event)">
+
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+
+                <input type="number" id="age" name="age" placeholder="Age" required>
+
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <input type="number" id="physical_score" name="physical_score" placeholder="Physical Score" required
+                    min="0" max="50">
+
+                <button type="submit" class="btn">
+                    <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1"
+                        class="sparkle">
+                        <path
+                            d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                        </path>
+                    </svg>
+                    <span class="text">Predict</span>
+                </button>
+            </form>
+        </div>
+
+        
+    
+
+        <div class="container">
+            <div class="form-container">
+                <form class="custom-form">
+                    <div class="custom-before"></div>
+                    <div class="custom-content">
+                        <span class="custom-title">Help us shine brighter! Share your thoughts with us....</span>
+                        <p class="custom-description">We're all ears! Tell us how we can make your experience even better.</p>
+                        <div class="custom-input-container">
+                            <a href="/feedback" class="custom-button">Provide Feedback</a>
+                        </div>
+                    </div>
+                    <div class="custom-after"></div>
+                </form>
+            </div>
+            <section id="result-section" class="myCard">
+                <div class="innerCard">
+                  <div class="frontSide">
+                    <h3 class="title">RESULT</h3>
+                    <div class="result-item">
+                      <p><span>Name:</span> <span id="result-name">Not provided</span></p>
+                    </div>
+                    <div class="result-item">
+                      <p><span>Age:</span> <span id="result-age">Not provided</span></p>
+                    </div>
+                    <div class="result-item">
+                      <p><span>Email:</span> <span id="result-email">Not provided</span></p>
+                    </div>
+                    <div class="result-item">
+                      <p><span>Physical Score:</span> <span id="result-physical-score">Not provided</span></p>
+                    </div>
+                  </div>
+                  <div class="backSide">
+                    <h3 class="title">RESULT</h3>
+                    <div class="result-item">
+                      <p><span>Result:</span> <span id="result">Pass</span></p>
+                    </div>
+                    <button class="result-button" onclick="goBack()">Go Back</button>
+                  </div>
+                </div>
+              </section>
+              
+            
+        </div>
+        
+
+    <footer>
+        <p>&copy; 2023 ML Hearing Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var fields = ['name', 'age', 'email', 'physical_score'];
+            for (var i = 0; i < fields.length; i++) {
+                var value = document.getElementById(fields[i]).value;
+                if (value === "") {
+                    alert("All fields must be filled out");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Validate the form
+            if (validateForm()) {
+                // Show the result section
+                document.getElementById("result-section").style.display = "block";
+
+                // Update result values
+                document.getElementById("result-name").innerText = document.getElementById("name").value;
+                document.getElementById("result-age").innerText = document.getElementById("age").value;
+                document.getElementById("result-email").innerText = document.getElementById("email").value;
+                document.getElementById("result-physical-score").innerText = document.getElementById("physical_score").value;
+
+                // Update result based on prediction (you need to fetch prediction from the server)
+                var prediction = 0; // Replace with actual prediction value
+                document.getElementById("result").innerText = prediction ? "Fail" : "Pass";
+
+                // Hide the form section
+                document.getElementById("prediction-form-section").style.display = "none";
+            }
+        }
+
+        function goBack() {
+            // Show the form section
+            document.getElementById("prediction-form-section").style.display = "block";
+
+            // Hide the result section
+            document.getElementById("result-section").style.display = "none";
+
+            // Clear input fields
+            var fields = ['name', 'age', 'email', 'physical_score'];
+            for (var i = 0; i < fields.length; i++) {
+                document.getElementById(fields[i]).value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

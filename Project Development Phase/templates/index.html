@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Hearing Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .container {
+            position: relative;
+            background-color: black;
+        }
+
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1em;
+            color: #203865; 
+        }
+
+        img { 
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+        }
+
+        .center h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+       
+    </header>
+
+    <div class="container">
+        <img src="https://cdn.dev.glasspress.io/info/audiometric-testing-audiogram-image-info-hero.jpg" alt="Background Image">
+        <div class="center">
+            <h4 style="text-align: center; color:#203865;"><em>Hear the future:</em></h4>
+            <h1>Audiometric AI Unleased</h1>
+        </div>
+    </div>
+
+    <!-- Banner Section -->
+    <section id="banner">
+        
+        <h2 class="custom-h2"><em>Welcome to Audiometric AI</em></h2>
+        <p class="content-text">Audiometric AI is a groundbreaking technology that enhances your hearing abilities using the power of artificial intelligence.
+            It's like having a smart assistant for your ears, helping you hear better and enjoy life to the fullest.
+            Experience the future of hearing with Audiometric AI.
+        </p>
+    </section>
+
+    <section>
+        <h2>Experience the Future of Hearing!</h2>
+        <p>Enhance your hearing abilities with cutting-edge machine learning technology.</p>
+        <a href="{{ url_for('predict') }}">
+        <button class="cssbuttons-io-button">
+            Get started
+            <div class="icon">
+              <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </button></a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 ML Hearing Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
